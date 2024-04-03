@@ -27,9 +27,13 @@ namespace EmployeeDetailsApp
                     MessageBox.Show("New employee details inserted successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
-                catch (SqlException)
+                catch (SqlException ex) when (ex.Number == 245)
                 {
                     MessageBox.Show("Please enter integer for ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    MessageBox.Show("Employee ID already exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 catch (Exception ex)
                 {

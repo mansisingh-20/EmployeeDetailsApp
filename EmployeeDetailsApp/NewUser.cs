@@ -48,5 +48,17 @@ namespace EmployeeDetailsApp
         {
             Close();
         }
+
+        private void cbUserShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbUserShowPassword.Checked == true)
+            {
+                tbUserPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                tbUserPassword.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
