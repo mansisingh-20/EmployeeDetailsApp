@@ -14,33 +14,40 @@ namespace EmployeeDetailsApp
 
         private void btnUserSave_Click(object sender, EventArgs e)
         {
-            if (tbUserUsername.Text != "" && tbUserPassword.Text != "")
+            if (tbUserUsername.Text != "" && tbUserPassword.Text != "" && tbUserRePassword.Text != "")
             {
-                try
+                if(tbUserPassword.Text == tbUserRePassword.Text)
                 {
-                    con.Open();
-                    string cmd = "INSERT INTO login (username, password) VALUES ('"+tbUserUsername.Text+"', '"+tbUserPassword.Text+"')";
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd, con);
-                    sda.SelectCommand.ExecuteNonQuery();
-                    MessageBox.Show("New user is successfully registered", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
+                    try
+                    {
+                        con.Open();
+                        string cmd = "INSERT INTO login (username, password) VALUES ('" + tbUserUsername.Text + "', '" + tbUserPassword.Text + "')";
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd, con);
+                        sda.SelectCommand.ExecuteNonQuery();
+                        MessageBox.Show("New user is successfully registered", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    catch (SqlException)
+                    {
+                        MessageBox.Show("Username already exist. Please enter different username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error in registering" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
                 }
-                catch (SqlException)
+                else
                 {
-                    MessageBox.Show("Username already exist. Please enter different username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error in registering" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                finally
-                {
-                    con.Close();
+                    MessageBox.Show("Password mismatch. Please enter same passwords.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Please fill both fields", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please enter all the details", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -49,15 +56,27 @@ namespace EmployeeDetailsApp
             Close();
         }
 
-        private void cbUserShowPassword_CheckedChanged(object sender, EventArgs e)
+        private void btnUserPw_Click(object sender, EventArgs e)
         {
-            if (cbUserShowPassword.Checked == true)
+            if(tbUserPassword.UseSystemPasswordChar == true)
             {
                 tbUserPassword.UseSystemPasswordChar = false;
             }
             else
             {
                 tbUserPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void btnUserRePw_Click(object sender, EventArgs e)
+        {
+            if (tbUserRePassword.UseSystemPasswordChar == true)
+            {
+                tbUserRePassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                tbUserRePassword.UseSystemPasswordChar = true;
             }
         }
     }

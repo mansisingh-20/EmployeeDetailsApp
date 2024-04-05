@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Imaging;
 
 namespace EmployeeDetailsApp
 {
     public partial class Main : Form
     {
+        public static string username;
         public Main()
         {
             InitializeComponent();
@@ -48,6 +50,7 @@ namespace EmployeeDetailsApp
                     if(dt.Rows.Count > 0)
                     {
                         MessageBox.Show("Welcome to Employee Management System", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        username = tbUsername.Text;
                         tbUsername.Text = "";
                         tbPassword.Text = "";
                         cbShowPassword.Checked = false;

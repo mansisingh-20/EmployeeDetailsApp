@@ -29,6 +29,12 @@ namespace EmployeeDetailsApp
         {
             BindData();
             gvEmployee.AllowUserToAddRows = false;
+            if(Main.username != "admin")
+            {
+                btnEmpInsert.Visible = false;
+                btnEmpDelete.Visible = false;
+                btnEmpUpdate.Visible = false;
+            }
         }
 
         void BindData()

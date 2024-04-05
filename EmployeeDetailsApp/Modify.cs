@@ -44,7 +44,7 @@ namespace EmployeeDetailsApp
 
         private void btnUpdateSubmit_Click(object sender, EventArgs e)
         {
-            if (tbModifyId.Text != "" && tbModifyName.Text != "")
+            if (tbModifyId.Text != "" && tbModifyName.Text != "" && dtModifyDob.Text != "" && cbModifyGender.Text != "" && tbModifyContact.Text != "" && tbModifyEmail.Text != "" && tbModifyDepartment.Text != "" && tbModifyDesignation.Text != "" && dtModifyDoj.Text != "" && tbModifyAddress.Text != "")
             {
 
                 try
@@ -59,13 +59,17 @@ namespace EmployeeDetailsApp
                     MessageBox.Show("Modified successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
-                catch (SqlException)
+                catch (SqlException ex) when (ex.Number == 245)
                 {
-                    MessageBox.Show("Please enter integer for ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Please enter integer for Employee ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    MessageBox.Show("Employee ID already exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error in modifying data" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Error in modifying data\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 finally
                 {
@@ -74,7 +78,7 @@ namespace EmployeeDetailsApp
             }
             else
             {
-                MessageBox.Show("Please enter Id and Name", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please enter all the details", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

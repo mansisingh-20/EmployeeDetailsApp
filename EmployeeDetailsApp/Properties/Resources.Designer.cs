@@ -73,6 +73,16 @@ namespace EmployeeDetailsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _public {
+            get {
+                object obj = ResourceManager.GetObject("public", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap a_unique_design_icon_of_employee_management_vector {
             get {
                 object obj = ResourceManager.GetObject("a-unique-design-icon-of-employee-management-vector", resourceCulture);

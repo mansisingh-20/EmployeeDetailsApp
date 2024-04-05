@@ -60,6 +60,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dtDoj);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.tbNewDesignation);
@@ -91,6 +94,7 @@
             // 
             // dtDoj
             // 
+            this.dtDoj.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtDoj.Location = new System.Drawing.Point(736, 256);
             this.dtDoj.Name = "dtDoj";
             this.dtDoj.Size = new System.Drawing.Size(293, 35);
@@ -98,15 +102,17 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(528, 262);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(173, 29);
+            this.label11.Size = new System.Drawing.Size(179, 29);
             this.label11.TabIndex = 20;
-            this.label11.Text = "Date of Joining";
+            this.label11.Text = "Date of Joining:";
             // 
             // tbNewDesignation
             // 
+            this.tbNewDesignation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNewDesignation.Location = new System.Drawing.Point(736, 180);
             this.tbNewDesignation.Name = "tbNewDesignation";
             this.tbNewDesignation.Size = new System.Drawing.Size(293, 35);
@@ -114,15 +120,17 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(528, 186);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 29);
+            this.label10.Size = new System.Drawing.Size(147, 29);
             this.label10.TabIndex = 18;
-            this.label10.Text = "Designation";
+            this.label10.Text = "Designation:";
             // 
             // dtDob
             // 
+            this.dtDob.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtDob.Location = new System.Drawing.Point(194, 181);
             this.dtDob.Name = "dtDob";
             this.dtDob.Size = new System.Drawing.Size(293, 35);
@@ -130,6 +138,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(24, 186);
             this.label9.Name = "label9";
@@ -139,6 +148,7 @@
             // 
             // cbNewGender
             // 
+            this.cbNewGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbNewGender.FormattingEnabled = true;
             this.cbNewGender.Items.AddRange(new object[] {
             "Male",
@@ -150,6 +160,8 @@
             // 
             // btnNewCancel
             // 
+            this.btnNewCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNewCancel.AutoSize = true;
             this.btnNewCancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnNewCancel.Location = new System.Drawing.Point(811, 431);
             this.btnNewCancel.Name = "btnNewCancel";
@@ -161,6 +173,8 @@
             // 
             // btnNewSubmit
             // 
+            this.btnNewSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNewSubmit.AutoSize = true;
             this.btnNewSubmit.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnNewSubmit.Location = new System.Drawing.Point(553, 431);
             this.btnNewSubmit.Name = "btnNewSubmit";
@@ -172,6 +186,7 @@
             // 
             // tbNewContact
             // 
+            this.tbNewContact.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNewContact.Location = new System.Drawing.Point(193, 338);
             this.tbNewContact.Name = "tbNewContact";
             this.tbNewContact.Size = new System.Drawing.Size(293, 35);
@@ -179,6 +194,7 @@
             // 
             // tbNewName
             // 
+            this.tbNewName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNewName.Location = new System.Drawing.Point(194, 105);
             this.tbNewName.Name = "tbNewName";
             this.tbNewName.Size = new System.Drawing.Size(293, 35);
@@ -186,6 +202,7 @@
             // 
             // tbNewDepartment
             // 
+            this.tbNewDepartment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNewDepartment.Location = new System.Drawing.Point(736, 102);
             this.tbNewDepartment.Name = "tbNewDepartment";
             this.tbNewDepartment.Size = new System.Drawing.Size(293, 35);
@@ -193,6 +210,7 @@
             // 
             // tbNewAddress
             // 
+            this.tbNewAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNewAddress.Location = new System.Drawing.Point(736, 335);
             this.tbNewAddress.Name = "tbNewAddress";
             this.tbNewAddress.Size = new System.Drawing.Size(293, 35);
@@ -200,6 +218,7 @@
             // 
             // tbNewEmail
             // 
+            this.tbNewEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNewEmail.Location = new System.Drawing.Point(736, 28);
             this.tbNewEmail.Name = "tbNewEmail";
             this.tbNewEmail.Size = new System.Drawing.Size(293, 35);
@@ -207,6 +226,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(24, 341);
             this.label7.Name = "label7";
@@ -216,6 +236,7 @@
             // 
             // tbNewId
             // 
+            this.tbNewId.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNewId.Location = new System.Drawing.Point(195, 28);
             this.tbNewId.Name = "tbNewId";
             this.tbNewId.Size = new System.Drawing.Size(293, 35);
@@ -223,6 +244,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(528, 341);
             this.label6.Name = "label6";
@@ -232,6 +254,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(24, 261);
             this.label5.Name = "label5";
@@ -241,6 +264,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(528, 108);
             this.label4.Name = "label4";
@@ -250,6 +274,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(24, 108);
             this.label3.Name = "label3";
@@ -259,6 +284,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(528, 31);
             this.label2.Name = "label2";
@@ -268,6 +294,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(24, 31);
             this.label1.Name = "label1";
@@ -277,6 +304,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BackgroundImage = global::EmployeeDetailsApp.Properties.Resources._6_Great_Benefits_of_Using_Employee_Task_Management_Software;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -288,6 +317,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,6 +335,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1170, 745);
             this.Name = "Insert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Insert";

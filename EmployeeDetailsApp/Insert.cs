@@ -14,7 +14,7 @@ namespace EmployeeDetailsApp
 
         private void btnNewSubmit_Click(object sender, EventArgs e)
         {
-            if (tbNewId.Text != "" && tbNewName.Text != "")
+            if (tbNewId.Text != "" && tbNewName.Text != "" && dtDob.Text != "" && cbNewGender.Text != "" && tbNewContact.Text != "" && tbNewEmail.Text != "" && tbNewDepartment.Text != "" && tbNewDesignation.Text != "" && dtDoj.Text != "" && tbNewAddress.Text != "")
             {
                 try
                 {
@@ -29,7 +29,7 @@ namespace EmployeeDetailsApp
                 }
                 catch (SqlException ex) when (ex.Number == 245)
                 {
-                    MessageBox.Show("Please enter integer for ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Please enter integer for Employee ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 catch (SqlException ex) when (ex.Number == 2627)
                 {
@@ -46,7 +46,7 @@ namespace EmployeeDetailsApp
             }
             else
             {
-                MessageBox.Show("Please enter Id and Full Name", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please enter all the details", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

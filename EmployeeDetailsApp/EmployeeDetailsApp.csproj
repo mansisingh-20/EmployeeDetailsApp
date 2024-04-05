@@ -206,6 +206,7 @@
       <DependentUpon>EmployeeDb.edmx</DependentUpon>
       <LastGenOutput>EmployeeDb.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\public.jpg" />
     <None Include="Resources\kisspng-computer-icons-refresh-free-download-clip-art-one-button-reload-5b282ade52fb22.5051240515293590703399.jpg" />
     <None Include="Resources\png-transparent-computer-icons-refresh-save-miscellaneous-blue-thumbnail-thumbnail.png" />
     <None Include="Resources\25519-9-cancel-button-hd-thumb.png" />
