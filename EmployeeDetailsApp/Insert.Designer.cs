@@ -131,6 +131,7 @@
             // dtDob
             // 
             this.dtDob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtDob.Checked = false;
             this.dtDob.Location = new System.Drawing.Point(194, 181);
             this.dtDob.Name = "dtDob";
             this.dtDob.Size = new System.Drawing.Size(293, 35);
@@ -187,10 +188,14 @@
             // tbNewContact
             // 
             this.tbNewContact.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbNewContact.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.tbNewContact.Location = new System.Drawing.Point(193, 338);
             this.tbNewContact.Name = "tbNewContact";
             this.tbNewContact.Size = new System.Drawing.Size(293, 35);
             this.tbNewContact.TabIndex = 12;
+            this.tbNewContact.Text = "+91-9876543210";
+            this.tbNewContact.Enter += new System.EventHandler(this.tbNewContact_Enter);
+            this.tbNewContact.Leave += new System.EventHandler(this.tbNewContact_Leave);
             // 
             // tbNewName
             // 
@@ -219,10 +224,14 @@
             // tbNewEmail
             // 
             this.tbNewEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbNewEmail.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.tbNewEmail.Location = new System.Drawing.Point(736, 28);
             this.tbNewEmail.Name = "tbNewEmail";
             this.tbNewEmail.Size = new System.Drawing.Size(293, 35);
             this.tbNewEmail.TabIndex = 8;
+            this.tbNewEmail.Text = "someone@example.com";
+            this.tbNewEmail.Enter += new System.EventHandler(this.tbNewEmail_Enter);
+            this.tbNewEmail.Leave += new System.EventHandler(this.tbNewEmail_Leave);
             // 
             // label7
             // 

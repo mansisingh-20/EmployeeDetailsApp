@@ -185,10 +185,12 @@
             // tbModifyContact
             // 
             this.tbModifyContact.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbModifyContact.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tbModifyContact.Location = new System.Drawing.Point(202, 365);
             this.tbModifyContact.Name = "tbModifyContact";
             this.tbModifyContact.Size = new System.Drawing.Size(293, 35);
             this.tbModifyContact.TabIndex = 12;
+            this.tbModifyContact.Text = "+91-9876543210";
             // 
             // tbModifyName
             // 
@@ -217,10 +219,12 @@
             // tbModifyEmail
             // 
             this.tbModifyEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbModifyEmail.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tbModifyEmail.Location = new System.Drawing.Point(774, 38);
             this.tbModifyEmail.Name = "tbModifyEmail";
             this.tbModifyEmail.Size = new System.Drawing.Size(293, 35);
             this.tbModifyEmail.TabIndex = 8;
+            this.tbModifyEmail.Text = "example@gmail.com";
             // 
             // label7
             // 

@@ -38,6 +38,7 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEmpExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvEmployee)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -160,11 +161,25 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Employee Details";
             // 
+            // btnEmpExport
+            // 
+            this.btnEmpExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEmpExport.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnEmpExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpExport.Location = new System.Drawing.Point(918, 144);
+            this.btnEmpExport.Name = "btnEmpExport";
+            this.btnEmpExport.Size = new System.Drawing.Size(209, 55);
+            this.btnEmpExport.TabIndex = 8;
+            this.btnEmpExport.Text = "Export To Excel";
+            this.btnEmpExport.UseVisualStyleBackColor = false;
+            this.btnEmpExport.Click += new System.EventHandler(this.btnEmpExport_Click);
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 689);
+            this.Controls.Add(this.btnEmpExport);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.gvEmployee);
             this.Controls.Add(this.btnLogOut);
@@ -197,5 +212,6 @@
         private System.Windows.Forms.DataGridView gvEmployee;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnEmpExport;
     }
 }

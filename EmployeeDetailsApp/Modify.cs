@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace EmployeeDetailsApp
@@ -44,12 +45,27 @@ namespace EmployeeDetailsApp
 
         private void btnUpdateSubmit_Click(object sender, EventArgs e)
         {
+            string email = tbModifyEmail.Text;
+            string phoneNumber = tbModifyContact.Text;
             if (tbModifyId.Text != "" && tbModifyName.Text != "" && dtModifyDob.Text != "" && cbModifyGender.Text != "" && tbModifyContact.Text != "" && tbModifyEmail.Text != "" && tbModifyDepartment.Text != "" && tbModifyDesignation.Text != "" && dtModifyDoj.Text != "" && tbModifyAddress.Text != "")
             {
 
                 try
                 {
                     con.Open();
+
+                    if (!IsValidPhoneNumber(phoneNumber))
+                    {
+                        MessageBox.Show("Invalid phone number\nPlease enter with country code\nExample: +91-9876543210", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+
+                    if (!IsValidEmail(email))
+                    {
+                        MessageBox.Show("Invalid email address\nPlease enter proper email id\nExample: someone@example.com", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+
                     string cmd = "UPDATE details " +
                         "SET id = '" + tbModifyId.Text + "', fullname = '" + tbModifyName.Text + "', dob = '" + dtModifyDob.Text + "', gender = '" + cbModifyGender.Text + "', contact = '" + tbModifyContact.Text + "'," +
                         " email = '" + tbModifyEmail.Text + "', department = '" + tbModifyDepartment.Text + "', designation = '" + tbModifyDesignation.Text + "', dateofjoining = '" + dtModifyDoj.Text + "', address = '" + tbModifyAddress.Text + "' " +
@@ -80,6 +96,20 @@ namespace EmployeeDetailsApp
             {
                 MessageBox.Show("Please enter all the details", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private bool IsValidEmail(string email)
+        {
+
+            string pattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+            return Regex.IsMatch(email, pattern);
+        }
+
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+
+            string pattern = @"^\+[1-9]\d{1,3}-\d{9,14}$"; // Assumes phone number has 10 digits
+            return Regex.IsMatch(phoneNumber, pattern);
         }
 
         private void btnUpdateCancel_Click(object sender, EventArgs e)
